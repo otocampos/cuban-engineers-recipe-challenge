@@ -1,14 +1,14 @@
 import 'package:cuban_recipes/models/step.dart';
 
 class AnalyzedInstructions {
-  final List<Step>? steps;
+  final List<StepRecipe>? steps;
 
   AnalyzedInstructions({
     this.steps,
   });
 
   factory AnalyzedInstructions.fromJson(Map<String, dynamic> json) {
-    final steps = List<Step>.from(json['steps'].map((item) => Step.fromJson(item)));
+    final steps = List<StepRecipe>.from(json['steps'].map((item) => StepRecipe.fromJson(item)));
     return AnalyzedInstructions(steps: steps);
   }
 

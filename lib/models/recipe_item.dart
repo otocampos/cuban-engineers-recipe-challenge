@@ -21,7 +21,7 @@ class RecipeItem {
   final String? license;
   final String? sourceName;
   final double? pricePerServing;
-  final List<ExtendedIngredient> extendedIngredients;
+  final List<ExtendedIngredient>? extendedIngredients;
   final int? id;
   final String? title;
   final int? readyInMinutes;
@@ -149,7 +149,7 @@ class RecipeItem {
       'license': license,
       'sourceName': sourceName,
       'pricePerServing': pricePerServing,
-      'extendedIngredients': extendedIngredients.map((ingredient) => ingredient.toJson()).toList(),
+      'extendedIngredients': extendedIngredients?.map((ingredient) => ingredient.toJson()).toList(),
       'id': id,
       'title': title,
       'readyInMinutes': readyInMinutes,
