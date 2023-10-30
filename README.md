@@ -21,16 +21,16 @@ Cooksy is a Flutter recipe app that offers a wide range of features for culinary
 
 ## Screenshots
 
-<a href="https://drive.google.com/uc?id=1MU62FsKLCOiJgYTvFK62CErYRNt1v8Fn"><img src="https://drive.google.com/uc?id=1LxtbYkZsIR9gMMEv3f6IcaxwWTcszARF" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
+<a href="https://drive.google.com/uc?id=1MU62FsKLCOiJgYTvFK62CErYRNt1v8Fn"><img src="https://drive.google.com/uc?id=1MU62FsKLCOiJgYTvFK62CErYRNt1v8Fn" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
 *Introduction Screen*
 
-<a href="https://drive.google.com/uc?id=1zL-aDdhgjj6uF7atE4ukNc6kRgkPyrGS"><img src="https://drive.google.com/uc?id=1LxtbYkZsIR9gMMEv3f6IcaxwWTcszARF" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
+<a href="https://drive.google.com/uc?id=1zL-aDdhgjj6uF7atE4ukNc6kRgkPyrGS"><img src="https://drive.google.com/uc?id=1zL-aDdhgjj6uF7atE4ukNc6kRgkPyrGS" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
 *Inspiration screen*
 
-<a href="https://drive.google.com/uc?id=13f46YcYb_7ugXZ3vd2Pb4vTPVbBGsNak"><img src="https://drive.google.com/uc?id=1LxtbYkZsIR9gMMEv3f6IcaxwWTcszARF" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
+<a href="https://drive.google.com/uc?id=13f46YcYb_7ugXZ3vd2Pb4vTPVbBGsNak"><img src="https://drive.google.com/uc?id=13f46YcYb_7ugXZ3vd2Pb4vTPVbBGsNak" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
 *Latest*
 
-<a href="https://drive.google.com/uc?id=1kC5asc04KL0nKYnpbpZcl2fZwM7QSZef"><img src="https://drive.google.com/uc?id=1LxtbYkZsIR9gMMEv3f6IcaxwWTcszARF" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
+<a href="https://drive.google.com/uc?id=1kC5asc04KL0nKYnpbpZcl2fZwM7QSZef"><img src="https://drive.google.com/uc?id=1kC5asc04KL0nKYnpbpZcl2fZwM7QSZef" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
 *detail*
 
 ## Setup
