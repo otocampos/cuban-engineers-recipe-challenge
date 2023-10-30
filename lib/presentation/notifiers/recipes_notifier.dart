@@ -1,5 +1,5 @@
-import 'package:cuban_recipes/data/repository/recipes_data.dart';
-import 'package:cuban_recipes/domain/repository/repository.dart';
+import 'package:cuban_recipes/data/repository/recipes_impl.dart';
+import 'package:cuban_recipes/domain/repository/recipes_repository.dart';
 import 'package:cuban_recipes/domain/use_cases/get_recipes_use_case.dart';
 import 'package:cuban_recipes/models/recipes.dart';
 import 'package:cuban_recipes/networking/api_service.dart';

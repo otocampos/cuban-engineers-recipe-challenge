@@ -1,29 +1,21 @@
-import 'equipment.dart';
-import 'ingredient.dart';
 
 class StepRecipe {
   final int? number;
   final String? step;
-  final List<Ingredient>? ingredients;
-  final List<Equipment>? equipment;
+
 
   StepRecipe({
     this.number,
     this.step,
-    this.ingredients,
-    this.equipment,
+
   });
 
   factory StepRecipe.fromJson(Map<String, dynamic> json) {
-    final ingredients =
-    List<Ingredient>.from(json['ingredients'].map((item) => Ingredient.fromJson(item)));
-    final equipment = List<Equipment>.from(json['equipment'].map((item) => Equipment.fromJson(item)));
+
 
     return StepRecipe(
-      number: json['number'],
-      step: json['step'],
-      ingredients: ingredients,
-      equipment: equipment,
+      number: json['number']??'',
+      step: json['step']??'',
     );
   }
 
@@ -31,8 +23,7 @@ class StepRecipe {
     return {
       'number': number,
       'step': step,
-      'ingredients': ingredients?.map((ingredient) => ingredient.toJson()).toList(),
-      'equipment': equipment?.map((equip) => equip.toJson()).toList(),
+
     };
   }
 
@@ -40,8 +31,6 @@ class StepRecipe {
   String toString() {
     return 'Step('
         'number: $number, '
-        'step: $step, '
-        'ingredients: $ingredients, '
-        'equipment: $equipment)';
+        'step: $step)';
   }
 }

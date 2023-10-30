@@ -1,9 +1,13 @@
 import 'package:cuban_recipes/presentation/screens/home/inspirations_screen/inspirations_screen.dart';
+import 'package:cuban_recipes/utils/strings_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:super_custom_bars/super_custom_bars.dart';
 
+import '../../../constants/widgets_keys.dart';
 import '../../providers/provider.dart';
+import 'latest_screen/latest_screen.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,26 +17,27 @@ class HomeScreen extends ConsumerWidget {
     final indexBottomNavbar = ref.watch(indexBottomNavbarProvider);
     final bodies = [
       const Center(child: InspirationsScreen()),
-      const Center(
-        child: Text('Hello From Favorite'),
-      ),
-      const Center(
-        child: Text('Hello From Settings'),
-      ),
+      const LatestScreen(),
     ];
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: indexBottomNavbar,
-        onTap: (value) {
-          ref.read(indexBottomNavbarProvider.notifier).update((state) => value);
-        },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite), label: 'Favorite'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Setting'),
-        ],
-      ),
+        selectedItemColor:Colors.black,
+          key: bottomBarKey,
+          currentIndex: indexBottomNavbar,
+          onTap: (value) {
+            ref
+                .read(indexBottomNavbarProvider.notifier)
+                .update((state) => value);
+          },
+          items: const [
+            BottomNavigationBarItem(
+              backgroundColor: Colors.black,
+                icon: Icon(Icons.lightbulb),
+                label: AppStrings.bottomBarInspirations),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.list_alt), label: AppStrings.bottomBarLatest),
+          ],
+        ),
       body: bodies[indexBottomNavbar],
     );
   }

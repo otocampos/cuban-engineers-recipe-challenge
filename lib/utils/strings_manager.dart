@@ -16,11 +16,20 @@ class AppStrings {
   static const String strTimeoutError = "timeout_error";
   static const String strDefaultError = "default_error";
   static const String strCacheError = "cache_error";
-  static const String strNoInternetError = "no_internet_error";
+  static const String strNoInternetError = "You are disconected";
 
-  //Title Texts
+  //Common Strings
+  static const String appBartTitle = "Cooksy";
+  static const String bottomBarInspirations = "Inspirations";
+  static const String bottomBarLatest = "Latest";
+
+
+  //Intro Title Texts
   static const String txtBtnIntro = "Let's Start";
   static const String txtTitleIntro = "All the recipes on your fingertips";
   static const String txtSubTitleInto = "Cooking on Thermomix made easy";
+
+  //
+  static const String txtBtnBrowseMore = "Browse more recipes";
 
 }

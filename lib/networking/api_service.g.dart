@@ -59,7 +59,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              '/recipes/random?number=10',
+              '/recipes/random?number=2',
               queryParameters: queryParameters,
               data: _data,
             )

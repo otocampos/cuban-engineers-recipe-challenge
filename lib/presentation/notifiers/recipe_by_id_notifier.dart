@@ -1,21 +1,15 @@
-import 'package:cuban_recipes/data/repository/recipes_data.dart';
-import 'package:cuban_recipes/domain/repository/repository.dart';
 import 'package:cuban_recipes/domain/use_cases/get_recipe_by_id_use_case.dart';
-import 'package:cuban_recipes/domain/use_cases/get_recipes_use_case.dart';
 import 'package:cuban_recipes/models/recipe_item.dart';
-import 'package:cuban_recipes/models/recipes.dart';
-import 'package:cuban_recipes/networking/api_service.dart';
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 
 class RecipeByIdNotifier extends ChangeNotifier {
   final GetRecipeByIdUseCase _recipesService;
 
-  RecipeItem _recipeItem = RecipeItem(extendedIngredients: []);
+  dynamic _recipeItem = RecipeItem();
 
   RecipeByIdNotifier(this._recipesService);
 
-  RecipeItem get recipesData => _recipeItem;
+  dynamic get recipesData => _recipeItem;
 
   bool _isLoading = false;
 
@@ -41,4 +35,5 @@ class RecipeByIdNotifier extends ChangeNotifier {
       },
     );
   }
+
 }
