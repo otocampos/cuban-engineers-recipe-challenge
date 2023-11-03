@@ -29,9 +29,10 @@ class _InspirationsScreenState extends ConsumerState<InspirationsScreen> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: false,
-          title:  Padding(
+          title: Padding(
             padding: const EdgeInsets.only(left: 16.0),
-            child: Text(AppStrings.appBartTitle, style: Theme.of(context).textTheme.titleLarge),
+            child: Text(AppStrings.appBartTitle,
+                style: Theme.of(context).textTheme.titleLarge),
           ),
           actions: [
             Padding(
@@ -59,14 +60,16 @@ class _InspirationsScreenState extends ConsumerState<InspirationsScreen> {
                         SliverToBoxAdapter(child: BrowseRecipes(recipeList)),
                         SliverToBoxAdapter(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 25,right: 25,bottom: 25),
-                              child: Container(
-                                height: 50,
-                                child: OutlinedButton(
-
-                                    onPressed: () {}, child: Text(AppStrings.txtBtnBrowseMore)),
-                              ),
-                            )),
+                          padding: const EdgeInsets.only(
+                              left: 25, right: 25, bottom: 25),
+                          child: Container(
+                            height: 50,
+                            child: OutlinedButton(
+                                key: btnBrowseMore,
+                                onPressed: () {},
+                                child: Text(AppStrings.txtBtnBrowseMore)),
+                          ),
+                        )),
                       ],
                     ),
                   ),

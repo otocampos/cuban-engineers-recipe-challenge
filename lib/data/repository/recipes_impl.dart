@@ -15,7 +15,6 @@ class RecipesRepositoryImpl implements RecipesRepository {
   @override
   Future<Either<Failure, Recipes>> getRecipes()async {
     try {
-      print("ESTA RODANDo RECIPES REPOSITORY TESTE");
       final response =await  _apiService.getRecipes();
       return Right(response);
     } on DioException catch (e) {

@@ -20,10 +20,12 @@ class FirstGridItem extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.7,
       child: InkWell(
-        onTap: (){
+        onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) =>  RecipeItemScreen(id:recipeItem.id!,title:recipeItem.title!)),
+            MaterialPageRoute(
+                builder: (context) => RecipeItemScreen(
+                    id: recipeItem.id!, title: recipeItem.title!)),
           );
         },
         child: Padding(
@@ -38,10 +40,16 @@ class FirstGridItem extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text("Recipe", style: Theme.of(context).textTheme.headlineLarge),
-                      Text("of the Day", style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight:FontWeight.normal ,color: Colors.grey,
-                      )),
-
+                      Text("Recipe",
+                          style: Theme.of(context).textTheme.headlineLarge),
+                      Text("of the Day",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineLarge
+                              ?.copyWith(
+                                fontWeight: FontWeight.normal,
+                                color: Colors.grey,
+                              )),
                     ],
                   ),
                   SizedBox(
@@ -62,8 +70,7 @@ class FirstGridItem extends StatelessWidget {
                       child: Image.network(
                         recipeItem.image!,
                         // Altura desejada
-                        fit: BoxFit
-                            .fitHeight,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                   ),

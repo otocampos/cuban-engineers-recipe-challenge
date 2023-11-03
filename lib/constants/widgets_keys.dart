@@ -10,4 +10,9 @@ const imgIntroKey = ValueKey('ImgIntroKey');
 const btnTitleIntroKey = ValueKey('BtnTitleIntroKey');
 const btnIntroKey = ValueKey('BtnIntroKey');
 
+
+const btnBrowseMore = ValueKey('btnBrowseMore');
+
+const screenLatest = ValueKey('screenLatest');
+
 const imgHero ='imgHero';

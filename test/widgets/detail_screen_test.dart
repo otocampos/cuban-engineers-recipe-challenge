@@ -46,17 +46,19 @@ void main() {
   }
   group('recipe by id', () {
 
-    testWidgets('recipe by Test', (WidgetTester tester) async{
+    testWidgets('recipe by IdTest', (WidgetTester tester) async{
 
       getRecipesAfter2secondsDelay();
       await tester.pumpWidget(createWidgetUnderTest());
-
-
-      //expect(find.text('Check'), findsOneWidget);
-      //expect(find.byKey(loginCircularProgressKey), findsOneWidget);
       await tester.pumpAndSettle();
-      expect(find.byKey(CircularProgressKey), findsNothing);
-      //expect(find.text('Latest'), findsOneWidget);
+
+
+      expect(find.text('recipe test'), findsOneWidget);
+      expect(find.text('title test'), findsOneWidget);
+      expect(find.text('Redy in: 20 minutes'), findsOneWidget);
+      expect(find.text('Step 1'), findsOneWidget);
+      expect(find.text('step 1 test'), findsOneWidget);
+
     });});
 
 

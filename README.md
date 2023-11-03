@@ -33,6 +33,11 @@ Cooksy is a Flutter recipe app that offers a wide range of features for culinary
 <a href="https://drive.google.com/uc?id=1kC5asc04KL0nKYnpbpZcl2fZwM7QSZef"><img src="https://drive.google.com/uc?id=1kC5asc04KL0nKYnpbpZcl2fZwM7QSZef" style="width: 200px; max-width: 100%; height: auto" title="Click to enlarge picture" /></a>
 *detail*
 
+## Enviroment
+Flutter:3.10.6
+Gradle:7.5
+
+
 ## Setup
 
 Follow the steps below to set up the development environment and run the project locally:
@@ -40,7 +45,7 @@ Follow the steps below to set up the development environment and run the project
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/cooksy.git
+   git clone https://github.com/otocampos/cuban-engineers-recipe-challenge.git
    cd cooksy
    flutter pub get
    flutter run --dart-define=spoon-api=YOU_API_KEY
