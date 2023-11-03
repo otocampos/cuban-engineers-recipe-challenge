@@ -12,7 +12,7 @@ Cooksy is a Flutter recipe app that offers a wide range of features for culinary
 
 - **Offline Persistence with Hive**: Recipes and essential data are stored locally, allowing users to access them even without an internet connection.
 
-- **Unit and Widget Testing**: We ensure application stability through automated testing.
+- **Unit, Widget and integration Testing**: We ensure application stability through automated testing.
 
 - **Lottie Animations**: Lottie animations are added to enhance the user experience.
 
