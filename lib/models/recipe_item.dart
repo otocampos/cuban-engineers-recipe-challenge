@@ -51,7 +51,7 @@ class RecipeItem {
       creditsText: json['creditsText'] ??'',
       license: json['license']??'',
       sourceName: json['sourceName']??'',
-      pricePerServing: json['pricePerServing']??'',
+      pricePerServing: json['pricePerServing']??0.0,
       id: json['id']??'',
       title: json['title']??'',
       readyInMinutes: json['readyInMinutes']??'',
@@ -88,26 +88,7 @@ class RecipeItem {
     };
   }
 
-  @override
-  String toString() {
-    return 'RecipeItem('
-        'creditsText: $creditsText, '
-        'license: $license, '
-        'sourceName: $sourceName, '
-        'pricePerServing: $pricePerServing, '
-        'id: $id, '
-        'title: $title, '
-        'readyInMinutes: $readyInMinutes, '
-        'servings: $servings, '
-        'sourceUrl: $sourceUrl, '
-        'image: $image, '
-        'imageType: $imageType, '
-        'summary: $summary, '
-        'instructions: $instructions, '
-        'analyzedInstructions: $analyzedInstructions, '
-        'originalId: $originalId, '
-        'spoonacularSourceUrl: $spoonacularSourceUrl)';
-  }
+
 
   @override
   bool operator ==(Object other) =>

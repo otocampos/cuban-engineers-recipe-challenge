@@ -9,17 +9,12 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio) = _ApiService;
 
-  @GET(UrlEndpoints.RANDOM_RECIPE)
-  Future<Recipes> getRecipe();
-
   @GET(UrlEndpoints.LIST_RANDOM_RECIPES)
   Future<Recipes> getRecipes();
 
   @GET('${UrlEndpoints.RECIPES_PARAM}/{recipeId}/information')
   Future<RecipeItem> getRecipeById(@Path('recipeId') int recipeId);
 
-  @GET(UrlEndpoints.SEARCH_RECIPES)
-  Future<List<RecipeItem>> searchRecipes(@Query('query') String query);
 
 
 

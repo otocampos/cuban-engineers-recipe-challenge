@@ -19,33 +19,6 @@ class _ApiService implements ApiService {
   String? baseUrl;
 
   @override
-  Future<Recipes> getRecipe() async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Recipes>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/recipes/random?number=1',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Recipes.fromJson(_result.data!);
-    return value;
-  }
-
-  @override
   Future<Recipes> getRecipes() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -96,35 +69,6 @@ class _ApiService implements ApiService {
               baseUrl,
             ))));
     final value = RecipeItem.fromJson(_result.data!);
-    return value;
-  }
-
-  @override
-  Future<List<RecipeItem>> searchRecipes(String query) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'query': query};
-    final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<RecipeItem>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/recipes/complexSearch',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => RecipeItem.fromJson(i as Map<String, dynamic>))
-        .toList();
     return value;
   }
 

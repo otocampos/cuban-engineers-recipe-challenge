@@ -27,14 +27,14 @@ void main() {
   setUpAll(()async {
 
     HttpOverrides.global = null;
+
   });
-  initAppModule();
-  //initHiveModule();
+ // initAppModule();
   final mockUseCase = MockGetLatestRecipeUseCase();
 
   void getRecipesAfter2secondsDelay() {
     when(() => mockUseCase.execute(unit)).thenAnswer((_) async {
-      return  Right(mockedRecipes);
+      return  Right(mockRecipesForTestingHive);
     });
   }
   Widget createMainWidgetUnderTest() {
@@ -59,6 +59,15 @@ void main() {
   }
 
   group('latest', () {
+    testWidgets('Latest Screen',
+            (WidgetTester tester) async {
+          getRecipesAfter2secondsDelay();
+          await tester.pumpAndSettle();
+          await tester.pumpWidget(createMainWidgetUnderTest());
+          expect(find.text('No recipes yet'), findsOneWidget);
+
+
+            });
 
 
     testWidgets('Latest item test',

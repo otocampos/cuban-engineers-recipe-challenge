@@ -1,4 +1,3 @@
-
 import 'package:cuban_recipes/constants/hive_keys.dart';
 import 'package:cuban_recipes/data/adapters/recipes_dio_hive_adapter.dart';
 import 'package:cuban_recipes/database/models/analyzed_instructions_table.dart';
@@ -32,24 +31,19 @@ class RecipeByIdRepositoryImpl implements RecipeByIdRepository {
           return null;
         },
       );
-      if (item==null) {
+      if (item == null) {
         print("RECIPE NOT FOUND IN HIVE... CONECTING WITH API");
-      final response = await _apiService.getRecipeById(id);
+        final response = await _apiService.getRecipeById(id);
         var recipe = RecipeDioHiveAdapter.convert(response);
         items.add(recipe);
         box.put(HiveKeys.LIST_RECIPES_KEY, items);
-         return Right(response);
+        return Right(response);
       }
       print("RECIPE FOUNDED IN HIVE");
       print(items.length);
       return Right(item);
 
-
-
-
       //RecipeItem item =  items.singleWhere((element) => element.id ==id);
-
-
     } on DioException catch (e) {
       return Left(ErrorHandler.handle(e).failure);
     }

@@ -5,8 +5,4 @@ import '../../networking/failure.dart';
 
 abstract class RecipeByIdRepository{
   Future<Either<Failure, dynamic>> getRecipeById(id);
-
-
-
-
 }

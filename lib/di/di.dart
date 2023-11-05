@@ -1,5 +1,4 @@
 import 'package:cuban_recipes/common/widgets/toast_message.dart';
-import 'package:cuban_recipes/common/widgets/toast_message_impl.dart';
 import 'package:cuban_recipes/data/repository/latest_recipe_impl.dart';
 import 'package:cuban_recipes/data/repository/recipes_by_id_impl.dart';
 import 'package:cuban_recipes/database/models/analyzed_instructions_table.dart';
@@ -17,6 +16,7 @@ import 'package:cuban_recipes/data/repository/recipes_impl.dart';
 import 'package:get_it/get_it.dart';
 
 
+import '../common/widgets/toast_message_impl.dart';
 import '../database/models/recipe_table.dart';
 import '../domain/repository/recipes_by_id_repository.dart';
 import '../domain/repository/recipes_repository.dart';

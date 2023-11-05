@@ -3,7 +3,6 @@ import 'package:cuban_recipes/utils/strings_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:super_custom_bars/super_custom_bars.dart';
 
 import '../../../constants/widgets_keys.dart';
 import '../../providers/provider.dart';

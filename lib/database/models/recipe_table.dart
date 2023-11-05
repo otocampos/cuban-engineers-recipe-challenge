@@ -56,9 +56,4 @@ class RecipeTable{
     this.originalId,
     this.spoonacularSourceUrl,
   });
-
-  @override
-  String toString() {
-    return 'RecipeTable{creditsText: $creditsText, license: $license, sourceName: $sourceName, pricePerServing: $pricePerServing, id: $id, title: $title, readyInMinutes: $readyInMinutes, servings: $servings, sourceUrl: $sourceUrl, image: $image, imageType: $imageType, summary: $summary, instructions: $instructions, originalId: $originalId, analyzedInstructions: $analyzedInstructions, spoonacularSourceUrl: $spoonacularSourceUrl}';
-  }
 }

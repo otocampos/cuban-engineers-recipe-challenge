@@ -14,7 +14,7 @@ class StepRecipe {
 
 
     return StepRecipe(
-      number: json['number']??'',
+      number: json['number']??0,
       step: json['step']??'',
     );
   }

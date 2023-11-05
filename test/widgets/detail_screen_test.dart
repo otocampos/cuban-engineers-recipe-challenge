@@ -26,7 +26,7 @@ void main() {
     HttpOverrides.global = null;
   });
 
-  MockRecipesService mockRecipesService = MockRecipesService();
+  final mockRecipesService = MockRecipesService();
 
   void getRecipesAfter2secondsDelay() {
 
@@ -44,7 +44,6 @@ void main() {
           home:  RecipeItemScreen( id: 1, title: 'recipe test',),
         ));
   }
-  group('recipe by id', () {
 
     testWidgets('recipe by IdTest', (WidgetTester tester) async{
 
@@ -59,7 +58,7 @@ void main() {
       expect(find.text('Step 1'), findsOneWidget);
       expect(find.text('step 1 test'), findsOneWidget);
 
-    });});
+    });
 
 
 }

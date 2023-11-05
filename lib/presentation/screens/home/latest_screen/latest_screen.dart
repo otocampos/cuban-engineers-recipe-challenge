@@ -32,7 +32,7 @@ class _LatestScreenState extends ConsumerState<LatestScreen> {
       return recipeList.isEmpty
           ? Center(
               key: screenLatest,
-              child: Text('No recipes yet '),
+              child: Text('No recipes yet'),
             )
           : Padding(
               padding: const EdgeInsets.all(16.0),

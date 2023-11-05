@@ -18,8 +18,5 @@ class AnalyzedInstructions {
     };
   }
 
-  @override
-  String toString() {
-    return 'AnalyzedInstructions(steps: $steps)';
-  }
+
 }

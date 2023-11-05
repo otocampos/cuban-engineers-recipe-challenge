@@ -15,9 +15,11 @@ List<RecipeItem> mockRecipesForTesting = [
       summary: "sumary test",
       readyInMinutes: 20,
       servings: 2,
-      analyzedInstructions: [AnalyzedInstructions(steps:[StepRecipe(number: 1,step: "step 1 test")])],
+      analyzedInstructions: [
+        AnalyzedInstructions(
+            steps: [StepRecipe(number: 1, step: "step 1 test")])
+      ],
       title: "title test"),
-
   RecipeItem(
       id: 2,
       sourceName: "Anne",
@@ -25,7 +27,9 @@ List<RecipeItem> mockRecipesForTesting = [
       summary: "sumary test 2",
       readyInMinutes: 30,
       servings: 3,
-      analyzedInstructions: [AnalyzedInstructions(steps:[StepRecipe(number: 1,step: "step 1")])],
+      analyzedInstructions: [
+        AnalyzedInstructions(steps: [StepRecipe(number: 1, step: "step 1")])
+      ],
       title: "title test 2"),
 ];
 
@@ -38,7 +42,6 @@ List<RecipeTable> mockRecipesForTestingTable = [
       readyInMinutes: 20,
       servings: 2,
       title: "title test"),
-
   RecipeTable(
       id: 2,
       sourceName: "Anne",
@@ -48,9 +51,6 @@ List<RecipeTable> mockRecipesForTestingTable = [
       servings: 3,
       title: "title test 2"),
 ];
-
-
-
 
 List<RecipeTable> mockRecipesForTestingHive = [
   RecipeTable(
@@ -87,3 +87,34 @@ final data = {
     }
   ],
 };
+final Map<String, dynamic> recipeItemJson = {
+  "id": 1,
+  "sourceName": "jhon",
+  "image": "https://placehold.co/100x100",
+  "summary": "sumary test",
+  "readyInMinutes": 20,
+  "servings": 2,
+  'analyzedInstructions': [
+    {
+      'steps': [
+        {'number': 1, 'step': "step test"}
+      ]
+    }
+  ],
+  "title": "title test"
+};
+
+final Map<String, dynamic> analyzedInstructionsJson = {
+  "analyzedInstructions": [
+    {
+      "steps": [
+        {"number":1, "step": "step test"}
+      ]
+    }
+  ]
+};
+final Map<String, dynamic> stepJson =
+        {"number":1, "step": "step test"};
+
+
+

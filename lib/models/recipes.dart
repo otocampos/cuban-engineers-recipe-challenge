@@ -17,8 +17,5 @@ class Recipes {
     };
   }
 
-  @override
-  String toString() {
-    return 'Recipe(recipes: $recipes)';
-  }
+
 }

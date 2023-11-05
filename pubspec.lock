@@ -733,7 +733,7 @@ packages:
     source: hosted
     version: "0.4.3"
   riverpod_annotation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: riverpod_annotation
       sha256: "9330309e4400f40e39a2a1d1c340e775d0fd23451cf2dd2286e03c7896fd2bd5"
@@ -849,14 +849,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  super_custom_bars:
-    dependency: "direct main"
-    description:
-      name: super_custom_bars
-      sha256: "58f1399e5948668c8e128814a18941bc1e4139e1182a48d8b93b879f6149ae11"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   sync_http:
     dependency: transitive
     description:
